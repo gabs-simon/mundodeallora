@@ -1,0 +1,35 @@
+{
+  "name": "next-ts-tw",
+  // Update the 'dockerComposeFile' list if you have more compose files or use different names.
+  // The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "docker-compose.yml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "'MesloLGS NF', monospace",
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "naumovs.color-highlight",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "github.copilot",
+    "ms-vscode.vscode-typescript-next",
+    "wix.vscode-import-cost",
+    "oderwat.indent-rainbow",
+    "christian-kohler.path-intellisense",
+    "csstools.postcss",
+    "bradlc.vscode-tailwindcss"
+  ],
+  "remoteUser": "nextjs",
+  "forwardPorts": [
+    3000
+  ],
+  "postStartCommand": "wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true"
+}
